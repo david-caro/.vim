@@ -1,0 +1,3 @@
+My vim config, ready to drop anywhere, just make sure the ~/.vimrc file is a
+link to this vimrc file, if it's not execute the set_up.sh script included (or
+just make the link yourself XD)
