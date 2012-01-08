@@ -3,13 +3,15 @@ call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
 syntax on
-" Highlight trailing whitespaces
+" Highlight trailing whitespaces and tabs (python)
 highlight ExtraWhitespace ctermbg=darkgreen guibg=darkgreen
 highlight Tab ctermbg=darkgreen guibg=darkgreen
 autocmd Syntax * syn match ExtraWhitespace /\s\+$/
 autocmd Syntax * syn match Tab /\t\+/
-
 autocmd BufWinLeave * call clearmatches()
+
+" sudo write dammit!
+cmap w!! %!sudo tee > /dev/null %
 
 " to fold and unfold code
 set foldmethod=indent
